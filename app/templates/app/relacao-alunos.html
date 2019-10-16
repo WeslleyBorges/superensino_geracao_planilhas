@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      text-align: left;
+    }
+
+    img#lapis_se {
+      width: 100px;
+      height: 100px;
+    }
+
+    #logo_se {
+      float: right;
+      width: 250px;
+      top: 50%;
+    }
+
+    .nome {
+      width: 420px;
+    }
+
+    .login {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="3">
+        <img id="lapis_se" src="lapis_se.png" alt="Logo da instituição não disponível.">
+        <img id="logo_se" src="se_logo.svg" alt="Logo da Super Ensino não disponível.">
+      </td>
+    </tr>
+    <tr>
+      <th>Count</th>  
+      <th>Nome do aluno</th>   
+      <th>Login</th>
+    </tr>
+      {% for aluno in dados_alunos %}
+        <tr>
+          <td></td>
+          <td class="nome">Weslley Borges Araujo Alves</td>
+          <td class="login">wborges</td>
+        </tr>
+      {% endfor %}
+
+  </table>
+</body>
+</html>

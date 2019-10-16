@@ -1,0 +1,36 @@
+<!DOCTYPE html>{% load static %}
+<html>
+
+<head>
+
+    <title>Super Ensino | Importação de dados</title>
+
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <link href="{% static 'css/animate.css'%}" rel="stylesheet">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+'       <sv></sv>
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+
+        <div>
+
+            <h3>Importação de Dados</h3>
+            <p>Escolha um arquivo CSV e Faça a importação
+            </p>
+            <form class="n-t" role="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                <div class="form-group">
+                   {{ form }}
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Importar os dados</button>
+            </form>
+            <p class="m-t"> <small>Super Ensino &copy; 2019</small> </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
